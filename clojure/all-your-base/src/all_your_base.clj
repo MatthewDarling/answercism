@@ -7,13 +7,6 @@
        (>= input-base 2)
        (>= target-base 2)))
 
-(defn num-to-seq
-  [num]
-  (->> num
-       str
-       seq
-       (map (comp parse-long str))))
-
 (defn biggest-power-of-base
   ([decimal-num target-base]
    (biggest-power-of-base decimal-num target-base 0))
