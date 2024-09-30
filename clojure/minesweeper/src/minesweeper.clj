@@ -5,10 +5,12 @@
   "Return a count of the mines present in the neighbours of cell (y,x)."
   [split-board y x]
   (count
-   (for [column (range (max (dec y) 0) (inc (min (inc y) (-> split-board first count))))
-         row (range (max (dec x) 0) (inc (min (inc x) (count split-board))))
-         :when (not= [y x] [column row])
-         :when (= \* (get-in split-board [column row]))]
+   (for [row (range (dec y) (+ 2 y))
+         column (range (dec x) (+ 2 x))
+         :when (< -1 row (count split-board))
+         :when (< -1 column (count (first split-board)))
+         :when (not= [y x] [row column])
+         :when (= \* (get-in split-board [row column]))]
      :mine)))
 
 (defn draw
