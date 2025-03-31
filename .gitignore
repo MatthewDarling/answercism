@@ -1,3 +1,7 @@
+## Ignore Exercism config directory everywhere
+*/.exercism
+
+## Clojure ignores
 pom.xml
 pom.xml.asc
 *.jar
