@@ -1,5 +1,5 @@
 ## Ignore Exercism config directory everywhere
-*/.exercism
+*/*/.exercism
 
 ## Clojure ignores
 pom.xml
